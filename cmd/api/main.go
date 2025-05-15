@@ -1,10 +1,14 @@
 package main
 
-import "log"
+import (
+	"log"
+
+	"github.com/gocial/internal/env"
+)
 
 func main() {
 	app := &application{
-		config{addr: ":8080"},
+		config{addr: env.GetString("ADDR", ":8080")},
 	}
 	mux := app.mount()
 
