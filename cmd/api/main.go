@@ -4,7 +4,7 @@ import "log"
 
 func main() {
 	app := &application{
-		config{addr: ":3000"},
+		config{addr: ":8080"},
 	}
 	mux := app.mount()
 
