@@ -1,0 +1,17 @@
+meta {
+  name: update username
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{URL}}/user/update-username
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username" : "constantine"
+  }
+}

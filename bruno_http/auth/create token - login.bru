@@ -1,0 +1,18 @@
+meta {
+  name: create token / login
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/auth/token
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "yogimail@dev.io",
+    "password": "yayaya123"
+  }
+}

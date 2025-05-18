@@ -1,0 +1,24 @@
+meta {
+  name: update post
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{URL}}/post/:id/update
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1
+}
+
+body:json {
+  {
+    "tags" : [
+      "wengdev",
+      "king js"
+    ]
+  }
+}
